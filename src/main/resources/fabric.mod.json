@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "yop",
+  "version": "${version}",
+  "name": "You'r Own Pockets",
+  "description": "",
+  "authors": [
+    "Croshaw"
+  ],
+  "contact": {
+    "repo": "https://github.com/Croshaw/yop"
+  },
+  "license": "MIT",
+  "icon": "assets/yop/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "me.croshaw.yop.client.YopClient"
+    ],
+    "main": [
+      "me.croshaw.yop.Yop"
+    ]
+  },
+  "mixins": [
+    "yop.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
