@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "yop:item/pockets_belt",
+    "layer1": "yop:item/pockets_belt_overlay"
+  }
+}
