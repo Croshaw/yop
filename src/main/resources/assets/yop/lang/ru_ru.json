@@ -1,0 +1,7 @@
+{
+  "item.yop.locked_item" : "Заблокировано",
+  "item.yop.pockets_backpack" : "Рюкзак",
+  "item.yop.pockets_belt" : "Пояс с караманами",
+  "item.yop.pockets_item.tooltip_1" : "+%s Слота",
+  "item.yop.pockets_item.tooltip_2" : "+%s Слотов"
+}

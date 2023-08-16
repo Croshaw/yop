@@ -1,0 +1,7 @@
+{
+  "item.yop.locked_item" : "Locked",
+  "item.yop.pockets_backpack" : "Backpack",
+  "item.yop.pockets_belt" : "Pockets Bag",
+  "item.yop.pockets_item.tooltip_1" : "+%s Slots",
+  "item.yop.pockets_item.tooltip_2" : "+%s Slots"
+}

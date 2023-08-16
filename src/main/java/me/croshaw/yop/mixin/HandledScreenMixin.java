@@ -23,10 +23,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(HandledScreen.class)
 public abstract class HandledScreenMixin<T extends ScreenHandler> extends Screen implements ScreenHandlerProvider<T> {
     @Shadow public abstract T getScreenHandler();
-
     @Unique
     private static final Identifier LOCKED_SLOT_TEXTURE = Yop.id("textures/gui/locked_slot.png");
-
     protected HandledScreenMixin(Text title) {
         super(title);
     }
@@ -34,9 +32,10 @@ public abstract class HandledScreenMixin<T extends ScreenHandler> extends Screen
     @Inject(method = "render", at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/systems/RenderSystem;setShaderColor(FFFF)V", ordinal = 0))
     private void render(MatrixStack matrices, int mouseX, int mouseY, float delta, CallbackInfo ci) {
         if(this.client == null || this.client.player == null || this.getScreenHandler() == null) return;
+        int offset = ContainerHelper.getTotalPocketOffset(client.player);
         for(int i = 0; i < this.getScreenHandler().slots.size(); ++i) {
             Slot slot = this.getScreenHandler().slots.get(i);
-            if(!this.client.player.isCreative() && ContainerHelper.shouldBeRemoved(slot, this.client.player)) {
+            if(!this.client.player.isCreative() && ContainerHelper.shouldBeRemoved(slot, this.client.player, offset)) {
                 this.setZOffset(100);
                 this.itemRenderer.zOffset = 100.0F;
                 RenderSystem.setShader(GameRenderer::getPositionColorShader);

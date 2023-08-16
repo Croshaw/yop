@@ -1,7 +1,6 @@
 package me.croshaw.yop.client.renderer;
 
 import me.croshaw.yop.Yop;
-import me.croshaw.yop.client.model.BackpackModel;
 import me.croshaw.yop.client.model.BeltModel;
 import me.croshaw.yop.item.PocketItem;
 import net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer;

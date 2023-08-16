@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "yop",
   "version": "${version}",
-  "name": "You'r Own Pockets",
+  "name": "Your Own Pockets",
   "description": "",
   "authors": [
     "Croshaw"
@@ -28,5 +28,9 @@
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
     "minecraft": "${minecraft_version}"
+  },
+  "suggests": {
+    "extraslots": ">=${extraslots_version}",
+    "trinkets": ">=${trinkets_version}"
   }
 }
